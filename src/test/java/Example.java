@@ -13,7 +13,7 @@ public class Example {
         JSONParser parser = new JSONParser();
         Object obj = parser.parse(new FileReader("src/main/resources/Testrail.json"));
         JSONArray json = (JSONArray) obj;
-        List<String> list = JsonPath.read(json, "$..id");
+        List<Integer> list = JsonPath.read(json, "$..id");
         System.out.println(list);
     }
 
